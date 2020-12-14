@@ -1,31 +1,21 @@
 class GameCard {
-    #_name;
     #_src;
     #_alt;
-    #_timeGame;
-    #_numberGamer;
+    #_name;
     #_description;
     #_grade;
     #_opinion;
     #_parent;
 
-    constructor(name, src, alt, timeGame, numberGamer,description, grade, opinion, parent) {
-        this.name = name;
+    constructor(src, alt, name, description, grade, opinion, parent) {
+        
         this.src = src;
         this.alt = alt;
-        this.timeGame = timeGame;
-        this.numberGamer = numberGamer;
+        this.name = name;
         this.description = description;
         this.grade = grade;
         this.opinion = opinion;
-        this.parent = document.querySelector(parent);
-    }
-
-    get name() {
-        return this.#_name;
-    }
-    set name(nameValue) {
-        this.#_name = nameValue;
+        this.parent = document.querySelector('.right-blok');
     }
 
     get src() {
@@ -42,18 +32,11 @@ class GameCard {
         this.#_alt = altValue;
     }
 
-    get timeGame() {
-        return this.#_timeGame;
+    get name() {
+        return this.#_name;
     }
-    set timeGame(timeGameValue) {
-        this.#_timeGame = timeGameValue;
-    }
-
-    get numberGamer() {
-        return this.#_numberGamer;
-    }
-    set numberGamer(numberGamerValue) {
-        this.#_numberGamer = numberGamerValue;
+    set name(nameValue) {
+        this.#_name = nameValue;
     }
 
     get description() {
@@ -86,24 +69,14 @@ class GameCard {
 
     createCard() {
         let elem = document.createElement('div');
-        elem.classList.add('...');
+        elem.classList.add('card');
         elem.innerHTML = `
         
-        <h2></h2>
-        <div>
-            <img>
-            <div>
-                <h3></h3>
-                <p></p>
-            </div>
-            <div>
-                <h3></h3>
-                <p></p>
-            </div>
-        </div>
-        <p></p>
-        <p></p>
-        <p></p>
+        <img class='card__image' src='${this.src}' alt='${this.alt}'>
+        <h2 class='card__title'>${this.name}</h2>
+        <p class='card__description'>${this.description}</p>
+        <p class='card__grade'>${this.grade}</p>
+        <p class='card__opinion'>${this.opinion}</p>
         
         `;
 
@@ -112,27 +85,122 @@ class GameCard {
 }
 
 let cards = [
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
+    {
+        src: 'img/game/worldwarcraft.jpg',
+        alt: 'World of warcraft',
+        name: 'World Of Warcraft',
+        description: 'World of Warcraft — массовая многопользовательская ролевая онлайн-игра, разработанная и издаваемая компанией Blizzard Entertainment. Действие World of Warcraft происходит в фэнтезийной вселенной Warcraft.',
+        grade: '5/5',
+        opinion: 'супер класс'
+    },
+    {
+        src: 'img/game/worldwarcraft.jpg',
+        alt: 'Warhammer 40000',
+        name: 'Warhammer 40000',
+        description: '',
+        grade: '5/5',
+        opinion: ''
+    },
+    {
+        src: 'img/game/worldwarcraft.jpg',
+        alt: 'Civilizatin Vi',
+        name: 'Civilizatin Vi',
+        description: '',
+        grade: '4.5/5',
+        opinion: ''
+    },
+    {
+        src: 'img/game/worldwarcraft.jpg',
+        alt: 'NHL 21',
+        name: 'NHL 21',
+        description: '',
+        grade: '5/5',
+        opinion: ''
+    },
+    {
+        src: 'img/game/worldwarcraft.jpg',
+        alt: 'FIFA 21',
+        name: 'FIFA 21',
+        description: '',
+        grade: '5/5',
+        opinion: ''
+    },
+    {
+        src: 'img/game/worldwarcraft.jpg',
+        alt: 'Command & Conquer: Generals',
+        name: 'Command & Conquer: Generals',
+        description: '',
+        grade: '5/5',
+        opinion: ''
+    },
+    {
+        src: 'img/game/worldwarcraft.jpg',
+        alt: 'Корсары 3',
+        name: 'Корсары 3',
+        description: '',
+        grade: '3.5/5',
+        opinion: ''
+    },
+    {
+        src: 'img/game/worldwarcraft.jpg',
+        alt: 'Mafia',
+        name: 'Mafia',
+        description: '',
+        grade: '4/5',
+        opinion: ''
+    },
+    {
+        src: 'img/game/worldwarcraft.jpg',
+        alt: 'Call of Duty: Modern Warfare',
+        name: 'Call of Duty: Modern Warfare',
+        description: '',
+        grade: '4/5',
+        opinion: ''
+    },
+    {
+        src: 'img/game/worldwarcraft.jpg',
+        alt: 'Need for Speed',
+        name: 'Need for Speed',
+        description: '',
+        grade: '4.5/5',
+        opinion: ''
+    },
+    {
+        src: 'img/game/worldwarcraft.jpg',
+        alt: 'Diablo',
+        name: 'Diablo',
+        description: '',
+        grade: '4/5',
+        opinion: ''
+    },
+    {
+        src: 'img/game/worldwarcraft.jpg',
+        alt: 'The elder scroll: Oblivion',
+        name: 'The elder scroll: Oblivion',
+        description: '',
+        grade: '3.5/5',
+        opinion: ''
+    },
+    {
+        src: 'img/game/worldwarcraft.jpg',
+        alt: 'GTA: Vice city',
+        name: 'GTA: Vice city',
+        description: '',
+        grade: '3.5/5',
+        opinion: ''
+    },
+    
 ]
 
 let card;
 
 for (let i = 0; i < cards.length; i++) {
     card = new GameCard(
-        cards[i][],
-        cards[i][],
-        cards[i][],
-        cards[i][],
-        cards[i][],
-        cards[i][],
-        cards[i][],
+        cards[i]['src'],
+        cards[i]['alt'],
+        cards[i]['name'],
+        cards[i]['description'],
+        cards[i]['grade'],
+        cards[i]['opinion'],
         '.cards .container').createCard();
 }

@@ -401,3 +401,71 @@ a {
         }
     }
 }
+
+
+
+
+
+
+// стил для страницы Game
+.blog {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-blok {
+    margin: 10px;
+    padding: 10px;
+    width: 20%;
+    height: 100vh;
+    border: 1px solid beige;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.right-blok {
+    width: 75%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    border: 1px solid beige;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    // box-sizing: border-box;
+
+    &__image {
+        width: 300px;
+        height: 400px;
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    &__description {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    &__grade {
+        font-size: 28px;
+        margin: 0;
+    }
+
+    &__opinion {
+        font-size: 16px;
+    }
+}
