@@ -298,8 +298,9 @@ a {
     &__project {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         padding-bottom: 30px;
-        box-sizing: border-box;
 
         &__more {
             display: flex;
@@ -369,12 +370,17 @@ a {
     }
 
     &__about {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
         width: 20%;
         padding: 10px;
         overflow: auto;
 
         & p {
             margin-top: 50px;
+            text-align: left;
         }
 
         & ul {
