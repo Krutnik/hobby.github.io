@@ -1,0 +1,127 @@
+.hockey-title {
+
+    & h2 {
+        letter-spacing: 5px;
+        margin: 30px;
+        font-size: 40px;
+        animation: pulse 2s infinite;
+
+        @keyframes pulse {
+            0% {
+                color: beige;
+                text-shadow: 0 0 10px red;
+            }
+            25% {
+                color: salmon;
+                text-shadow: 0 0 10px yellow;
+            }
+            50% {
+                color: deepSkyBlue;
+                text-shadow: 0 0 10px fuchsia;
+            }
+            75% {
+                color: lime;
+                text-shadow: 0 0 10px blue;
+            }
+            100% {
+                color: beige;
+                text-shadow: 0 0 10px red;
+            }
+        }
+    }
+}
+
+
+.hockey-cup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    &-stenly {
+        width: 40%;
+        padding: 10px;
+        display: table;
+
+        border-radius: 50px;
+        background-color: rgba(255, 255, 255, 0.2);
+
+        & h3 {
+            letter-spacing: 5px;
+            font-size: 25px;
+            letter-spacing: 5px;
+            margin: 20px;
+            text-align: left;
+        }
+
+        &-blok {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            & img {
+                width: 40%;
+                height: 70%;
+                margin: 10px;
+            }
+
+            & div {
+                text-align: left;
+            }
+        }   
+    }
+
+    &-gagarin {
+        width: 40%;
+        padding: 10px;
+        display: table;
+
+        border-radius: 50px;
+        background-color: rgba(255, 255, 255, 0.2);
+
+        & h3 {
+            letter-spacing: 5px;
+            font-size: 25px;
+            letter-spacing: 5px;
+            margin: 20px;
+            text-align: left;
+        }
+
+        &-blok {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            & img {
+                width: 40%;
+                height: 70%;
+                margin: 10px;
+            }
+
+            & div {
+                text-align: left;
+            }
+        }   
+    }
+}
+
+.world {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    &-games {
+        width: 40%;
+
+        & img {
+            margin: 20px;
+        }
+    }
+
+    &-real {
+        width: 40%;
+
+        & img {
+            margin: 20px;
+        }
+    }
+}

@@ -8,50 +8,120 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Langar&" rel="stylesheet">
     <link rel="stylesheet/less" type="text" href="css/style.less">
+    <link rel="stylesheet/less" type="text" href="css/game.less">
 </head>
 
 <body>
     <header>
         <div class="head">
-            <h1 class="head__title"><a href="https://krutnik.github.io/ending.github.io/index.html">My hobbi</a></h1>
-            <a class="head__link" href="https://krutnik.github.io/ending.github.io/game.html">Game</a>
-            <a class="head__link" href="#">Hockey</a>
-            <a class="head__link" href="#">Table games</a>
-            <a class="head__link" href="#">Craft</a>
+            <h1 class="head__title"><a class="head__title__hobbi link"
+                    href="https://krutnik.github.io/ending.github.io/index.html">My hobbi</a></h1>
+            <a class="head__link link" href="https://krutnik.github.io/ending.github.io/game.html">Game</a>
+            <a class="head__link link" href="https://krutnik.github.io/ending.github.io/hockey.html">Hockey</a>
+            <a class="head__link link" href="https://krutnik.github.io/ending.github.io/tablegame.html">Table games</a>
+            <a class="head__link link" href="https://krutnik.github.io/ending.github.io/craft.html">Craft</a>
             <button class="head__btn">Order craft</button>
         </div>
     </header>
     <main class="blog">
         <aside class="left-blok">
-            <h2>Рейтинг</h2>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <h2>Жанр</h2>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <h2>Издатель</h2>
-            <ul>
-                <li>EA Games</li>
-                <li>Activision</li>
-                <li>Blizzard</li>
-                <li></li>
-                <li></li>
-            </ul>
-            <h2>Колво игроков</h2>
-            <ul>
-                <li>Для одного</li>
-                <li>Против других</li>
-            </ul>
+            <h2>Find your game</h2>
+            <div>
+                <fieldset class="game-genre">
+                    <legend>Genre</legend>
+                    <div class="genre-chek">
+                        <input class="genre-input" id="All" name="genre" type="radio" checked>
+                        <label for="All">All</label>
+                    </div>
+                    <div class="genre-chek">
+                        <input class="genre-input" id="MMORPG" name="genre" type="radio">
+                        <label for="MMORPG">MMORPG</label>
+                    </div>
+                    <div class="genre-chek">
+                        <input class="genre-input" id="Simulator" name="genre" type="radio">
+                        <label for="Simulator">Simulator</label>
+                    </div>
+                    <div class="genre-chek">
+                        <input class="genre-input" id="RTS" name="genre" type="radio">
+                        <label for="RTS">RTS - стратегия в реальном времени</label>
+                    </div>
+                    <div class="genre-chek">
+                        <input class="genre-input" id="TBS" name="genre" type="radio">
+                        <label for="TBS">TBS - пошаговая стратегия</label>
+                    </div>
+                    <div class="genre-chek">
+                        <input class="genre-input" id="RPG" name="genre" type="radio">
+                        <label for="RPG">RPG - ролевая игра</label>
+                    </div>
+                    <div class="genre-chek">
+                        <input class="genre-input" id="TPS" name="genre" type="radio">
+                        <label for="TPS">TPS - шутер от третьего лица</label>
+                    </div>
+                    <div class="genre-chek">
+                        <input class="genre-input" id="FPS" name="genre" type="radio">
+                        <label for="FPS">FPS - шутер от первого лица</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div>   
+                <fieldset class="genre-setting">
+                    <legend>Rating</legend>
+                    <span>3.5</span>
+                    <input class="genre-setting size-text" type="range" min="3.5" max="5" step="0.5" value="5">
+                    <span>5</span>
+                    <output class="genre-setting size"></output>  
+                </fieldset>
+            </div>
+            <div>
+                <fieldset class="game-developer">
+                    <legend>Developer</legend>
+                    <div>
+                        <input type="checkbox">
+                        <label for="">All</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="">EA</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="">Blizzard Entertaiment</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="">Lionhead Studios</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="">Rock Star Game</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="">Firaxis Games</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="">Relic Entertainment</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="">Акелла</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="">Illusion Softworks</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="">Infinity Ward</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="">Bethesda Game Studios</label>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="head__btn">Show</button>
         </aside>
         <div class="right-blok">
             <div class="cards">
@@ -61,8 +131,25 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="foot">
+        <h2>Welcome to the world of Hobbies</h2>
+        <p>The world is so exciting and interesting, study it and get to know</p>
+        <div class="foot-contacs">
+            <a class="link" href=""><img src="/img/footer/facebook.jpg" alt=""></a>
+            <a class="link" href=""><img src="/img/footer/instagram.jpg" alt=""></a>
+            <a class="link" href=""><img src="/img/footer/mail.jpg" alt=""></a>
+            <a class="link" href=""><img src="/img/footer/pintrest.jpg" alt=""></a>
+            <a class="link" href=""><img src="/img/footer/skype.jpg" alt=""></a>
+            <a class="link" href=""><img src="/img/footer/telegram.jpg" alt=""></a>
+            <a class="link" href=""><img src="/img/footer/twitter.jpg" alt=""></a>
+            <a class="link" href=""><img src="/img/footer/vk.jpg" alt=""></a>
+            <a class="link" href=""><img src="/img/footer/whatsapp.jpg" alt=""></a>
+        </div>
 
+        <div class="me">
+            <p>Created by me</p>
+            <p>Made by me</p>
+        </div>
     </footer>
 
 

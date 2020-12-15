@@ -2,19 +2,21 @@ class GameCard {
     #_src;
     #_alt;
     #_name;
-    #_description;
+    #_genre;
+    #_developer;
     #_grade;
-    #_opinion;
+    #_category
     #_parent;
 
-    constructor(src, alt, name, description, grade, opinion, parent) {
+    constructor(src, alt, name, genre, developer, grade, category, parent) {
         
         this.src = src;
         this.alt = alt;
         this.name = name;
-        this.description = description;
+        this.genre = genre;
+        this.developer = developer;
         this.grade = grade;
-        this.opinion = opinion;
+        this.category = category;
         this.parent = document.querySelector('.right-blok');
     }
 
@@ -39,11 +41,18 @@ class GameCard {
         this.#_name = nameValue;
     }
 
-    get description() {
-        return this.#_description;
+    get genre() {
+        return this.#_genre;
     }
-    set description(descriptionValue) {
-        this.#_description = descriptionValue;
+    set genre(genreValue) {
+        this.#_genre = genreValue;
+    }
+
+    get developer() {
+        return this.#_developer;
+    }
+    set developer(developerValue) {
+        this.#_developer = developerValue;
     }
 
     get grade() {
@@ -53,11 +62,11 @@ class GameCard {
         this.#_grade = gradeValue;
     }
 
-    get opinion() {
-        return this.#_opinion;
+    get category() {
+        return this.#_category;
     }
-    set opinion(opinionValue) {
-        this.#_opinion = opinionValue;
+    set category(categoryValue) {
+        this.#_category = categoryValue;
     }
 
     get parent() {
@@ -70,13 +79,14 @@ class GameCard {
     createCard() {
         let elem = document.createElement('div');
         elem.classList.add('card');
+        elem.setAttribute('data-category', `${this.genre}`);
         elem.innerHTML = `
         
         <img class='card__image' src='${this.src}' alt='${this.alt}'>
         <h2 class='card__title'>${this.name}</h2>
-        <p class='card__description'>${this.description}</p>
-        <p class='card__grade'>${this.grade}</p>
-        <p class='card__opinion'>${this.opinion}</p>
+        <p class='card__genre'>Genre: ${this.genre}</p>
+        <p class='card__developer'>Developer: ${this.developer}</p>
+        <p class='card__grade'>My mark: ${this.grade}</p>
         
         `;
 
@@ -89,105 +99,127 @@ let cards = [
         src: 'img/game/worldwarcraft.jpg',
         alt: 'World of warcraft',
         name: 'World Of Warcraft',
-        description: 'World of Warcraft — массовая многопользовательская ролевая онлайн-игра, разработанная и издаваемая компанией Blizzard Entertainment. Действие World of Warcraft происходит в фэнтезийной вселенной Warcraft.',
+        genre: 'MMORPG',
+        developer: 'Blizzard Entertainment',
         grade: '5/5',
-        opinion: 'супер класс'
+        category: 'MMOPRG'
     },
     {
-        src: 'img/game/worldwarcraft.jpg',
+        src: 'img/game/wh40.jpg',
         alt: 'Warhammer 40000',
         name: 'Warhammer 40000',
-        description: '',
-        grade: '5/5',
-        opinion: ''
+        genre: 'RTS',
+        developer: 'Relic Entertainment',
+        grade: '4/5',
+        category: 'RTS'
     },
     {
-        src: 'img/game/worldwarcraft.jpg',
+        src: 'img/game/civi6.jpg',
         alt: 'Civilizatin Vi',
         name: 'Civilizatin Vi',
-        description: '',
+        genre: 'TBS',
+        developer: 'Firaxis Games',
         grade: '4.5/5',
-        opinion: ''
+        category: 'TBS'
     },
     {
-        src: 'img/game/worldwarcraft.jpg',
+        src: 'img/game/nhl.jpg',
         alt: 'NHL 21',
         name: 'NHL 21',
-        description: '',
+        genre: 'Simulator',
+        developer: 'EA',
         grade: '5/5',
-        opinion: ''
+        category: 'Simulator'
     },
     {
-        src: 'img/game/worldwarcraft.jpg',
+        src: 'img/game/fifa.jpg',
         alt: 'FIFA 21',
         name: 'FIFA 21',
-        description: '',
+        genre: 'Simulator',
+        developer: 'EA',
         grade: '5/5',
-        opinion: ''
+        category: 'Simulator'
     },
     {
-        src: 'img/game/worldwarcraft.jpg',
-        alt: 'Command & Conquer: Generals',
-        name: 'Command & Conquer: Generals',
-        description: '',
+        src: 'img/game/generals.jpg',
+        alt: 'C&C: Generals',
+        name: 'C&C: Generals',
+        genre: 'RTS',
+        developer: 'EA',
         grade: '5/5',
-        opinion: ''
+        category: 'RTS'
     },
     {
-        src: 'img/game/worldwarcraft.jpg',
+        src: 'img/game/korsar.jpg',
         alt: 'Корсары 3',
         name: 'Корсары 3',
-        description: '',
+        genre: 'PRG',
+        developer: 'Акелла',
         grade: '3.5/5',
-        opinion: ''
+        category: 'PRG'
     },
     {
-        src: 'img/game/worldwarcraft.jpg',
+        src: 'img/game/mafia.jpg',
         alt: 'Mafia',
         name: 'Mafia',
-        description: '',
-        grade: '4/5',
-        opinion: ''
+        genre: 'TPS',
+        developer: 'Illusion Softworks',
+        grade: '4/5', 
+        category: 'TPS'
     },
     {
-        src: 'img/game/worldwarcraft.jpg',
+        src: 'img/game/CoD.jpg',
         alt: 'Call of Duty: Modern Warfare',
         name: 'Call of Duty: Modern Warfare',
-        description: '',
+        genre: 'FPS',
+        developer: 'Infinity Ward',
         grade: '4/5',
-        opinion: ''
+        category: 'FPS'
     },
     {
-        src: 'img/game/worldwarcraft.jpg',
+        src: 'img/game/nfs.jpg',
         alt: 'Need for Speed',
         name: 'Need for Speed',
-        description: '',
+        genre: 'Simulator',
+        developer: 'EA',
         grade: '4.5/5',
-        opinion: ''
+        category: 'Simulator'
     },
     {
-        src: 'img/game/worldwarcraft.jpg',
+        src: 'img/game/diablo.jpeg',
         alt: 'Diablo',
         name: 'Diablo',
-        description: '',
+        genre: 'PRG',
+        developer: 'Blizzard Entertainment',
         grade: '4/5',
-        opinion: ''
+        category: 'PRG'
     },
     {
-        src: 'img/game/worldwarcraft.jpg',
+        src: 'img/game/oblivion.jpg',
         alt: 'The elder scroll: Oblivion',
         name: 'The elder scroll: Oblivion',
-        description: '',
+        genre: 'RPG',
+        developer: 'Bethesda Game Studios',
         grade: '3.5/5',
-        opinion: ''
+        category: 'RPG'
     },
     {
-        src: 'img/game/worldwarcraft.jpg',
+        src: 'img/game/gta.jpg',
         alt: 'GTA: Vice city',
         name: 'GTA: Vice city',
-        description: '',
+        genre: 'TPS',
+        developer: 'Rock Star Game',
         grade: '3.5/5',
-        opinion: ''
+        category: 'TPS'
+    },
+    {
+        src: 'img/game/fable.jpg',
+        alt: 'Fable',
+        name: 'Fable',
+        genre: 'RPG',
+        developer: 'Lionhead Studios',
+        grade: '4.5/5',
+        category: 'RPG'
     },
     
 ]
@@ -199,8 +231,45 @@ for (let i = 0; i < cards.length; i++) {
         cards[i]['src'],
         cards[i]['alt'],
         cards[i]['name'],
-        cards[i]['description'],
+        cards[i]['genre'],
+        cards[i]['developer'],
         cards[i]['grade'],
-        cards[i]['opinion'],
+        cards[i]['category'],
         '.cards .container').createCard();
+}
+
+let sizeText = document.querySelector('.size');
+let rangeText = document.querySelector('.size-text');
+console.log(sizeText);
+console.log(rangeText);
+
+let genreVal, children;
+
+function createGenre() {
+    genreVal = document.createElement('p');
+    genreVal.classList.add('');
+    genreVal.style.fontSize = sizeText.textContainer;
+
+    return genreVal;
+}
+
+rangeText.oninput = function () {
+    let fontSize = rangeText.value;
+
+    sizeText.textContent = fontSize;
+}
+
+let cardGenres = document.querySelectorAll('.card');
+// let btnCheck = document.querySelectorAll('.genre-input');
+let checkedGenre = document.querySelectorAll('.genre-chek');
+
+checkedGenre.oninput = function () {
+    for (cardGenre of cardGenres) {
+        if (cardGenre.dataset.category !== checkedGenre.value && checkedGenre.value !== 'all') {
+            cardGenre.classList.add("hidden");
+        }
+        else {
+            cardGenre.classList.remove("hidden");
+        }
+    }
 }

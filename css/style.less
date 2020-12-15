@@ -1,11 +1,17 @@
+// общие классы
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1900px;
+    margin: 0;
+
     background-color: black;
     background-image: url(/img/orda.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 
-    margin: 0;
     font-family: 'Langar', cursive;
     text-align: center;
     color: beige;
@@ -23,11 +29,11 @@ img {
     border-radius: 20px;
 }
 
-a {
-    text-decoration: none;
-    color: beige;
+.link {
+    text-decoration: none !important;
+    color: beige !important;
     padding: 10px;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0 !important;
     outline: none;
     border: none;
 
@@ -42,6 +48,7 @@ a {
     }
 }
 
+// шапка начало
 .head {
     display: flex;
     flex-direction: row;
@@ -50,6 +57,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
+    height: 100px;
 
     background-color: rgb(53, 30, 0);
     font-family: 'Langar', cursive;
@@ -57,9 +65,8 @@ a {
 
     &__title {
         padding: 10px;
-        
 
-        & a {
+        &__hobbi {
             border-radius: 20%;
             padding-left: 50px;
             padding-right: 50px;
@@ -67,12 +74,9 @@ a {
     }
 
     &__link {
-        width: 150px;
-        height: 40px;
-        text-align: center;
+        padding: 10px 50px;
+        height: 50px;
         font-size: 25px;
-        text-decoration: none;
-        color: Beige;
 
         &:hover {
             background-color: rgb(67, 122, 22);
@@ -93,7 +97,6 @@ a {
         width: 150px;
         height: 50px;
         border-radius: 20px;
-        outline: none;
         border: none;
         font-size: 25px;
         font-family: 'Langar', cursive;
@@ -105,31 +108,88 @@ a {
         }
         &:focus {
             background-color: rgb(170, 168, 32);
+            outline: none;
         }
         &:active {
             background-color: rgb(212, 82, 31);
         }
     }
 }
+// шапка конец
 
-.game {
+
+// тело начало
+main {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    & h1 {
+        font-size: 50px;
+        letter-spacing: 5px;
+        animation: pulse 2s infinite;
+
+        @keyframes pulse {
+            0% {
+                color: beige;
+                text-shadow: 0 0 10px red;
+            }
+            25% {
+                color: salmon;
+                text-shadow: 0 0 10px yellow;
+            }
+            50% {
+                color: deepSkyBlue;
+                text-shadow: 0 0 10px fuchsia;
+            }
+            75% {
+                color: lime;
+                text-shadow: 0 0 10px blue;
+            }
+            100% {
+                color: beige;
+                text-shadow: 0 0 10px red;
+            }
+        }
+    }
+}
+
+.game-setting {
+    padding: 30px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
-    & span {
-        text-transform: uppercase;
+    & p {
+        font-size: 25px;
+        margin-bottom: 20px;
+        letter-spacing: 5px;
     }
 
-    &__image {
-        width: 500px;
-        height: 500px;
-        margin: 20px;
+    & span {
+        text-transform: uppercase; 
+    }
+
+    & img {
+        width: 1650px;
+        height: 700px;
+        margin: auto;
+    }
+
+    & .link {
+        margin-top: 30px;
+        font-size: 20px;
+        letter-spacing: 5px;
     }
 }
 
 .hockey {
     text-align: right;
+
+    & .link {
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
 }
 
 .hockey-history {
@@ -137,7 +197,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
     height: 850px;
-    
+
     &__text {
         padding: 10px;
         overflow: auto;
@@ -149,7 +209,7 @@ a {
         border-radius: 50px 0 0 50px;
         background-color: rgba(255, 255, 255, 0.2);
     }
-
+    
     &__image {
         position: relative;
         margin-right: 10px;
@@ -157,6 +217,13 @@ a {
         & img {
             border-radius: 50px 0 0 50px;
             position: absolute;
+            border: 3px solid Indigo;
+            transition: 2s;
+
+            &:hover {
+                transform: scale(1.5);
+                z-index: 50;
+            }
         }
 
         & .img-1,
@@ -218,9 +285,9 @@ a {
             left: 700px;
         }    
     }
+
+
 }
-
-
 
 .table-game {
     margin-top: 50px;
@@ -268,6 +335,11 @@ a {
             background-color: rgba(255, 255, 255, 0.2);
             border-radius: 0 50px 50px 0;
 
+            & h3 {
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+
             &__description {
                 text-align: center;
 
@@ -287,6 +359,11 @@ a {
             }
         }
     }
+
+    // & .link {
+    //     font-size: 20px;
+    //     letter-spacing: 5px;
+    // }
 }
 
 .craft__blok {
@@ -309,7 +386,12 @@ a {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        padding: 10px;
         padding-bottom: 30px;
+
+        & h3 {
+            letter-spacing: 5px;
+        }
 
         &__more {
             display: flex;
@@ -329,6 +411,11 @@ a {
                 height: 300px;
             }
         }
+
+        & .link {
+            font-size: 20px;
+            letter-spacing: 5px;
+        }
     }
 
     &__work {
@@ -343,6 +430,11 @@ a {
             background-color: rgba(255, 255, 255, 0.2);
             border: 1px solid white;
             margin-bottom: 20px;
+            padding: 10px;
+
+            & h3 {
+                letter-spacing: 5px;
+            }
 
             &__setting {
                 display: flex;
@@ -365,17 +457,54 @@ a {
             }
         }
         &-helpers {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             background-color: rgba(255, 255, 255, 0.2);
             border: 1px solid white;
+            padding: 10px;
+
+            & h3 {
+                letter-spacing: 5px;
+            }
+
+            & .link {
+                font-size: 20px;
+                letter-spacing: 5px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
         }
         &-inspiration {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
             background-color: rgba(255, 255, 255, 0.2);
             margin-top: 20px;
             padding: 20px;
             border-radius: 0 0 50px 50px;
             border: 1px solid white;
-        }
+            padding: 10px;
 
+            & h3 {
+                letter-spacing: 5px;
+            }
+
+            & .future {
+                & h4 {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+        
+            & .link {
+                font-size: 20px;
+                letter-spacing: 5px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+        }
     }
 
     &__about {
@@ -386,6 +515,10 @@ a {
         width: 20%;
         padding: 10px;
         overflow: auto;
+
+        & h3 {
+            letter-spacing: 5px;
+            }
 
         & p {
             margin-top: 50px;
@@ -399,73 +532,94 @@ a {
                 list-style-type: none;
             }
         }
+
+        & .link {
+            font-size: 20px;
+            letter-spacing: 5px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
     }
 }
+// тело конец
 
 
+// подвал начало
+.foot {
+    margin: 0;
+    padding-top: 40px;
+    width: 100%;
+    right: 0;
+    background-color: rgb(53, 30, 0);
+    color: beige;
 
-
-
-
-// стил для страницы Game
-.blog {
-    display: flex;
-    flex-direction: row;
-}
-
-.left-blok {
-    margin: 10px;
-    padding: 10px;
-    width: 20%;
-    height: 100vh;
-    border: 1px solid beige;
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.right-blok {
-    width: 75%;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 30%;
-    border: 1px solid beige;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 20px;
-    // box-sizing: border-box;
-
-    &__image {
-        width: 300px;
-        height: 400px;
-    }
-
-    &__title {
-        font-size: 30px;
+    & h2 {
+        margin: 0;
+        margin-bottom: 20px;
+        font-size: 40px;
         font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        animation: pulse 2s infinite;
+
+        @keyframes pulse {
+            0% {
+                color: beige;
+                text-shadow: 0 0 10px red;
+            }
+            25% {
+                color: salmon;
+                text-shadow: 0 0 10px yellow;
+            }
+            50% {
+                color: deepSkyBlue;
+                text-shadow: 0 0 10px fuchsia;
+            }
+            75% {
+                color: lime;
+                text-shadow: 0 0 10px blue;
+            }
+            100% {
+                color: beige;
+                text-shadow: 0 0 10px red;
+            }
+        }
+    }
+
+    & p {
+        font-size: 25px;
         margin: 0;
+        padding-bottom: 30px;
+        letter-spacing: 5px;
     }
 
-    &__description {
-        font-size: 14px;
-        text-align: left;
+    &-contacs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        & a {
+            margin-right: 30px;
+
+            & img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+        }
     }
 
-    &__grade {
-        font-size: 28px;
+    & .me {
         margin: 0;
-    }
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
 
-    &__opinion {
-        font-size: 16px;
+        & p {
+            margin: 0;
+            margin-right: 100px;
+        }
     }
 }
+// подвал конец
