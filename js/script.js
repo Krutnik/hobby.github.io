@@ -259,19 +259,34 @@ rangeText.oninput = function () {
     sizeText.textContent = fontSize;
 }
 
-let cardGenres = document.querySelectorAll('.card');
-let inputGenre = document.querySelectorAll('.genre-input');
-// let checkedGenre = document.querySelectorAll('.genre-chek');
-console.log(cardGenres);
-console.log(inputGenre);
+let cardDs = document.querySelectorAll('.card');
+let inputGenre = document.querySelector('.genre-chek');
+// let inputGenre = document.querySelector('.game-genre');
 
-inputGenre.onchange = function () {
-    for (cardGenre of cardGenres) {
-        if (cardGenre.dataset.category !== inputGenre.value && inputGenre.value !== 'all') {
-            cardGenre.classList.add("hidden");
+inputGenre.onclick = function () {
+    for (cardD of cardDs) {
+        if (cardD.dataset.category == inputGenre.value && inputGenre.value !== 'all') {
+            cardD.classList.add("hidden");
         }
         else {
-            cardGenre.classList.remove("hidden");
+            cardD.classList.remove("hidden");
         }
     }
 }
+
+
+// работает с select
+// let milks = document.querySelectorAll('.card');
+// let inputGenre = document.querySelector('.list');
+
+// inputGenre.onchange = function () {
+//     for (milk of milks) {
+//         if (milk.dataset.category !== inputGenre.value && inputGenre.value !== 'all') {
+//             milk.classList.add("hidden");
+
+//         }
+//         else {
+//             milk.classList.remove("hidden");
+//         }
+//     }
+// };
