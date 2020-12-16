@@ -1,0 +1,67 @@
+.cart-blok {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    // align-items: center;
+
+    margin: 20px;
+}
+
+.cart {
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid beige;
+    border-radius: 0 50px 50px 0;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    &__title {
+        letter-spacing: 5px;
+        
+    }
+    &__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+
+        &__image {
+            border-radius: 0;
+            border: 2px solid fuchsia;
+        }
+        
+        &__specifications {
+            margin-left: 20px;
+
+            &__game {
+                margin-bottom: 50px;
+
+                &__title {
+                    font-size: 20px;
+                }
+                &__time {
+                    text-shadow: 0 0 10px fuchsia;
+                }
+                &__number {
+                    text-shadow: 0 0 10px fuchsia;
+                }
+            }
+        }
+    }
+
+    &__description {
+        margin-top: 30px;
+        text-align: left;
+
+    }
+    &__grade {
+        margin: 0;
+        font-size: 30px;
+
+    }
+}
