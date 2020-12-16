@@ -259,9 +259,8 @@ rangeText.oninput = function () {
     sizeText.textContent = fontSize;
 }
 
-let cardDs = document.querySelectorAll('.card');
-let inputGenre = document.querySelector('.genre-chek');
-// let inputGenre = document.querySelector('.game-genre');
+let cardDs = document.querySelector('.card');
+let inputGenre = document.querySelectorAll('.genre-input');
 
 inputGenre.onclick = function () {
     for (cardD of cardDs) {
