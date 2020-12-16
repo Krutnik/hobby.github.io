@@ -260,12 +260,14 @@ rangeText.oninput = function () {
 }
 
 let cardGenres = document.querySelectorAll('.card');
-// let btnCheck = document.querySelectorAll('.genre-input');
-let checkedGenre = document.querySelectorAll('.genre-chek');
+let inputGenre = document.querySelectorAll('.genre-input');
+// let checkedGenre = document.querySelectorAll('.genre-chek');
+console.log(cardGenres);
+console.log(inputGenre);
 
-checkedGenre.oninput = function () {
+inputGenre.onchange = function () {
     for (cardGenre of cardGenres) {
-        if (cardGenre.dataset.category !== checkedGenre.value && checkedGenre.value !== 'all') {
+        if (cardGenre.dataset.category !== inputGenre.value && inputGenre.value !== 'all') {
             cardGenre.classList.add("hidden");
         }
         else {

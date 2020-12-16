@@ -1,0 +1,169 @@
+h2 {
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text {
+    margin: 0 20px;
+    padding: 20px;
+
+    column-count: 4;
+    column-width: 200px;
+    text-align: left;
+
+    border: 1px solid beige;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    & h3 {
+        margin-bottom: 20px;
+    }
+}
+
+.cosplay__project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    &__completed,
+    &__in-works,
+    &__assistants {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30%;
+
+        border: 1px solid beige;
+        background-color: rgba(255, 255, 255, 0.2);
+
+        & h3 {
+            margin: 30px 0;
+            letter-spacing: 5px;
+            text-shadow: 0 0 15px rgb(182, 47, 47);
+        }
+    }
+
+    &__completed {
+
+        &__carts {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin: 0 10px 20px 10px;
+            padding: 10px;
+
+            border-radius: 20px;
+            border: 1px solid beige;
+            background-color: rgba(255, 255, 255, 0.3);
+
+            &__image {
+                margin: 0;
+
+                & img:first-child {
+                    margin-bottom: 10px;
+                }
+
+                & img {
+                    width: 250px;
+                    height: 350px;
+                }
+            }
+
+            &__text {
+                margin-left: 30px;
+                text-align: left;
+                
+
+                & .border-left {
+                    padding-left: 10px;
+                    border-left: 1px solid beige;
+
+                    & h4 {
+                    letter-spacing: 5px;
+                    margin-bottom: 30px;
+                    padding-left: 5px;
+                    }
+
+                    & p {
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__in-works {
+        display: table;
+        justify-content: flex-start;
+
+        &__carts {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin: 0 10px 20px 10px;
+            padding: 10px;
+
+            border-radius: 20px;
+            border: 1px solid beige;
+            background-color: rgba(255, 255, 255, 0.3);
+
+            &__image {
+                margin: 0;
+
+                & img:first-child {
+                    margin-bottom: 10px;
+                }
+
+                & img {
+                    width: 250px;
+                    height: 350px;
+                }
+            }
+
+            &__text {
+                margin-left: 30px;
+                text-align: left;
+                
+
+                & .border-left {
+                    padding-left: 10px;
+                    border-left: 1px solid beige;
+
+                    & h4 {
+                    letter-spacing: 5px;
+                    margin-bottom: 30px;
+                    padding-left: 5px;
+                    }
+
+                    & p {
+                        padding-left: 20px;
+                    }
+                }
+            }
+       }
+
+       &__festival {
+           margin: 50px 0;
+           padding: 10px;
+           text-align: left;
+
+            &__image {
+                float: left;
+                margin: 0 10px 10px 5px;
+            }
+
+            &__text {
+
+                & h4 {
+                    font-size: 40px;
+                    margin-bottom: 20px;
+                }
+            }
+       }
+    }
+
+    &__futured {
+
+    }
+}
