@@ -264,7 +264,7 @@ let inputGenre = document.querySelectorAll('.genre-input');
 
 inputGenre.onclick = function () {
     for (cardD of cardDs) {
-        if (cardD.dataset.category == inputGenre.value && inputGenre.value !== 'all') {
+        if (cardD.dataset.category == inputGenre[i].value && inputGenre.value !== 'all') {
             cardD.classList.add("hidden");
         }
         else {
