@@ -623,3 +623,55 @@ main {
     }
 }
 // подвал конец
+
+// адаптив
+@media (max-width: 576px) {
+    body {
+        width: 576px;
+    }
+
+    .head {
+        text-align: center;
+
+        &__title {
+            display: block;
+            width: 70%;
+        }
+
+        & .other {
+            display: none;
+        }
+    }
+
+    .game-setting {
+
+        & .carousel {
+            display: none;
+        } 
+    }
+
+    & .hockey-history {
+
+
+        &__image {
+
+            & img {
+                position: relative;
+            }
+
+            // & .img-1,
+            // & .img-1,
+
+            & .img-3,
+            & .img-4,
+            & .img-5,
+            & .img-6,
+            & .img-7,
+            & .img-8,
+            & .img-9,
+            & .img-10 {
+                display: none;
+            }
+        }
+    }
+}
