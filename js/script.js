@@ -260,18 +260,36 @@ rangeText.oninput = function () {
 }
 
 let cardDs = document.querySelector('.card');
-let inputGenre = document.querySelectorAll('.genre-input');
+// let inputGenre = document.querySelectorAll('.genre-input');
 
-inputGenre.onclick = function () {
-    for (cardD of cardDs) {
-        if (cardD.dataset.category == inputGenre[i].value && inputGenre.value !== 'all') {
-            cardD.classList.add("hidden");
-        }
-        else {
-            cardD.classList.remove("hidden");
-        }
-    }
+let checkbox = document.querySelectorAll('.genre-input');
+
+for (let i = 0; i < checkbox.length; i++) {
+    checkbox[i].addEventListener("change", checkedOrNot);
 }
+
+// function checkedOrNot() {
+//     let isChecked = this.checked;
+
+//     if (isChecked) {
+//         cardDs.classList.add('hidden');
+//     }
+//     else {
+//         cardDs.classList.remove('hidden');
+//     }
+// }
+
+// inputGenre.onclick = function () {
+//     for (cardD of cardDs) {
+//         if (cardD.dataset.category == inputGenre[i].value && inputGenre.value !== 'all') {
+//             cardD.classList.add("hidden");
+//         }
+//         else {
+//             cardD.classList.remove("hidden");
+//         }
+//     }
+// }
+
 
 
 // работает с select
@@ -289,3 +307,7 @@ inputGenre.onclick = function () {
 //         }
 //     }
 // };
+
+
+
+
