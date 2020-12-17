@@ -124,7 +124,7 @@ class GameTableCard {
 let carts = [
     {
         name: 'Carcassone',
-        src: '/img/tableGame/carcassonne2.jpg',
+        src: 'img/tableGame/carcassonne2.jpg',
         alt: 'Carcassone',
         titleTimeGame: 'Duration of the game:',
         timeGame: 'from 25 minutes',
@@ -135,7 +135,7 @@ let carts = [
     },
     {
         name: 'Monopoly',
-        src: '/img/tableGame/monopoly.jpg',
+        src: 'img/tableGame/monopoly.jpg',
         alt: 'monopoly',
         titleTimeGame: 'Duration of the game:',
         timeGame: 'from 60 minutes',
@@ -146,7 +146,7 @@ let carts = [
     },
     {
         name: 'Sid Meiers Civilization: A New Dawn',
-        src: '/img/tableGame/civigame.jpg',
+        src: 'img/tableGame/civigame.jpg',
         alt: 'Sid Meiers Civilization: A New Dawn',
         titleTimeGame: 'Duration of the game:',
         timeGame: '60 to 120 minutes',
@@ -157,7 +157,7 @@ let carts = [
     },
     {
         name: 'Evolution',
-        src: '/img/tableGame/evol.jpg',
+        src: 'img/tableGame/evol.jpg',
         alt: 'Evolution',
         titleTimeGame: 'Duration of the game:',
         timeGame: '30 to 60 minutes',
@@ -168,7 +168,7 @@ let carts = [
     },
     {
         name: 'Catan',
-        src: '/img/tableGame/catan.jpg',
+        src: 'img/tableGame/catan.jpg',
         alt: 'Catan',
         titleTimeGame: 'Duration of the game:',
         timeGame: '45 to 90 minutes',
@@ -179,7 +179,7 @@ let carts = [
     },
     {
         name: 'UNO',
-        src: '/img/tableGame/uno.jpg',
+        src: 'img/tableGame/uno.jpg',
         alt: 'UNO',
         titleTimeGame: 'Duration of the game:',
         timeGame: '15 to 45 minutes',
@@ -190,7 +190,7 @@ let carts = [
     },
     {
         name: 'The corridor',
-        src: '/img/tableGame/gorridor.jpg',
+        src: 'img/tableGame/gorridor.jpg',
         alt: 'The corridor',
         titleTimeGame: 'Duration of the game:',
         timeGame: '5 to 10 minutes',
@@ -201,7 +201,7 @@ let carts = [
     },
     {
         name: 'Rummikub',
-        src: '/img/tableGame/rumi.jpg',
+        src: 'img/tableGame/rumi.jpg',
         alt: 'Rummikub',
         titleTimeGame: 'Duration of the game:',
         timeGame: 'from 20 minutes',
@@ -212,7 +212,7 @@ let carts = [
     },
     {
         name: 'Game of Thrones',
-        src: '/img/tableGame/game.jpg',
+        src: 'img/tableGame/game.jpg',
         alt: 'Game of Thrones',
         titleTimeGame: 'Duration of the game:',
         timeGame: '120 to 180 minutes',
@@ -223,7 +223,7 @@ let carts = [
     },
     {
         name: 'Ticket to Ride Europe',
-        src: '/img/tableGame/ticket.jpg',
+        src: 'img/tableGame/ticket.jpg',
         alt: 'Ticket to Ride Europe',
         titleTimeGame: 'Duration of the game:',
         timeGame: '30 to 60 minutes',
@@ -234,7 +234,7 @@ let carts = [
     },
     {
         name: 'Suburbia',
-        src: '/img/tableGame/suburbia.jpg',
+        src: 'img/tableGame/suburbia.jpg',
         alt: 'Suburbia',
         titleTimeGame: 'Duration of the game:',
         timeGame: 'from 90 minutes',
