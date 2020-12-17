@@ -31,115 +31,27 @@
         
         <aside class="left-blok">
             <h2>Find your game</h2>
-            <div>
-                <legend>Genre</legend>
-                <!-- <select class="list" name="genre" id="genre" size="8">
-                    <option value="all" selected>All</option>
-                    <option value="MMORPG">MMORPG</option>
-                    <option value="Simulator">Simulator</option>
-                    <option value="RPG">RPG</option>
-                    <option value="RTS">RTS</option>
-                    <option value="TBS">TBS</option>
-                    <option value="TPS">TPS</option>
-                    <option value="FPS">FPS</option>
-                </select> -->
-                <fieldset class="game-genre">
+            <div class="setting-filter">
+                <div class="btn-blok">
                     <legend>Genre</legend>
-                    <div class="genre-chek">
-                        <input class="genre-input" id="all" name="genre" type="radio" value="all" checked>
-                        <label for="all">All</label>
-                    </div>
-                    <div class="genre-chek">
-                        <input class="genre-input" id="MMORPG" name="genre" type="radio" value="MMORPG">
-                        <label for="MMORPG">MMORPG</label>
-                    </div>
-                    <div class="genre-chek">
-                        <input class="genre-input" id="Simulator" name="genre" type="radio" value="Simulator">
-                        <label for="Simulator">Simulator</label>
-                    </div>
-                    <div class="genre-chek">
-                        <input class="genre-input" id="RTS" name="genre" type="radio" value="RTS">
-                        <label for="RTS">RTS - стратегия в реальном времени</label>
-                    </div>
-                    <div class="genre-chek">
-                        <input class="genre-input" id="TBS" name="genre" type="radio" value="TBS">
-                        <label for="TBS">TBS - пошаговая стратегия</label>
-                    </div>
-                    <div class="genre-chek">
-                        <input class="genre-input" id="RPG" name="genre" type="radio" value="RPG">
-                        <label for="RPG">RPG - ролевая игра</label>
-                    </div>
-                    <div class="genre-chek">
-                        <input class="genre-input" id="TPS" name="genre" type="radio" value="TPS">
-                        <label for="TPS">TPS - шутер от третьего лица</label>
-                    </div>
-                    <div class="genre-chek">
-                        <input class="genre-input" id="FPS" name="genre" type="radio" value="FPS">
-                        <label for="FPS">FPS - шутер от первого лица</label>
-                    </div>
-                </fieldset>
-            </div>
-            <div>   
-                <fieldset class="genre">
+                    <button class="btn" data-filter="all">All</button>
+                    <button class="btn" data-filter="MMORPG">MMORPG</button>
+                    <button class="btn" data-filter="Simulator">Simulator</button>
+                    <button class="btn" data-filter="RTS">RTS</button>
+                    <button class="btn" data-filter="TBS">TBS</button>
+                    <button class="btn" data-filter="RPG">PRG</button>
+                    <button class="btn" data-filter="TPS">TPS</button>
+                    <button class="btn" data-filter="FPS">FPS</button>
+                </div>
+                <div class="btn-blok">
                     <legend>Rating</legend>
-                    <div class="genre-setting">
-                        <span>3.5</span>
-                        <input class="genre-setting-range size-text" type="range" min="3.5" max="5" step="0.5" value="5">
-                        <span>5</span>
-                        <output class="genre-setting-window size"></output>
-                    </div>
-                </fieldset>
+                    <button class="btn" data-filter="all">All</button>
+                    <button class="btn" data-filter="3.5">3.5</button>
+                    <button class="btn" data-filter="4">4</button>
+                    <button class="btn" data-filter="4.5">4.5</button>
+                    <button class="btn" data-filter="5">5</button>
+                </div>
             </div>
-            <div>
-                <fieldset class="game-developer">
-                    <legend>Developer</legend>
-                    <div>
-                        <input type="checkbox">
-                        <label for="">All</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="checkboxClass">
-                        <label for="">EA</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="checkboxClass">
-                        <label for="">Blizzard Entertaiment</label>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <label for="">Lionhead Studios</label>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <label for="">Rock Star Game</label>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <label for="">Firaxis Games</label>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <label for="">Relic Entertainment</label>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <label for="">Акелла</label>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <label for="">Illusion Softworks</label>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <label for="">Infinity Ward</label>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <label for="">Bethesda Game Studios</label>
-                    </div>
-                </fieldset>
-            </div>
-            <button class="head__btn">Show</button>
         </aside>
         <div class="right-blok">
             
@@ -179,7 +91,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.3/less.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     
-    <script src="js/script.js"></script>
+    <script src="js/game.js"></script>
 </body>
     
 </html>

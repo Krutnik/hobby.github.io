@@ -79,14 +79,15 @@ class GameCard {
     createCard() {
         let elem = document.createElement('div');
         elem.classList.add('card');
-        elem.setAttribute('data-category', `${this.genre}`);
+        elem.classList.add(`${this.genre}`);
+        elem.classList.add(`${this.grade}`);
         elem.innerHTML = `
         
         <img class='card__image' src='${this.src}' alt='${this.alt}'>
         <h2 class='card__title'>${this.name}</h2>
         <p class='card__genre'>Genre: ${this.genre}</p>
         <p class='card__developer'>Developer: ${this.developer}</p>
-        <p class='card__grade'>My mark: ${this.grade}</p>
+        <p class='card__grade'>My mark: ${this.grade}/5</p>
         
         `;
 
@@ -101,7 +102,7 @@ let cards = [
         name: 'World Of Warcraft',
         genre: 'MMORPG',
         developer: 'Blizzard Entertainment',
-        grade: '5/5',
+        grade: '5',
         category: 'MMOPRG'
     },
     {
@@ -110,7 +111,7 @@ let cards = [
         name: 'Warhammer 40000',
         genre: 'RTS',
         developer: 'Relic Entertainment',
-        grade: '4/5',
+        grade: '4',
         category: 'RTS'
     },
     {
@@ -119,7 +120,7 @@ let cards = [
         name: 'Civilizatin Vi',
         genre: 'TBS',
         developer: 'Firaxis Games',
-        grade: '4.5/5',
+        grade: '4.5',
         category: 'TBS'
     },
     {
@@ -128,7 +129,7 @@ let cards = [
         name: 'NHL 21',
         genre: 'Simulator',
         developer: 'EA',
-        grade: '5/5',
+        grade: '5',
         category: 'Simulator'
     },
     {
@@ -137,7 +138,7 @@ let cards = [
         name: 'FIFA 21',
         genre: 'Simulator',
         developer: 'EA',
-        grade: '5/5',
+        grade: '5',
         category: 'Simulator'
     },
     {
@@ -146,7 +147,7 @@ let cards = [
         name: 'C&C: Generals',
         genre: 'RTS',
         developer: 'EA',
-        grade: '5/5',
+        grade: '5',
         category: 'RTS'
     },
     {
@@ -155,7 +156,7 @@ let cards = [
         name: 'Корсары 3',
         genre: 'PRG',
         developer: 'Акелла',
-        grade: '3.5/5',
+        grade: '3.5',
         category: 'PRG'
     },
     {
@@ -164,7 +165,7 @@ let cards = [
         name: 'Mafia',
         genre: 'TPS',
         developer: 'Illusion Softworks',
-        grade: '4/5', 
+        grade: '4', 
         category: 'TPS'
     },
     {
@@ -173,7 +174,7 @@ let cards = [
         name: 'Call of Duty: Modern Warfare',
         genre: 'FPS',
         developer: 'Infinity Ward',
-        grade: '4/5',
+        grade: '4',
         category: 'FPS'
     },
     {
@@ -182,7 +183,7 @@ let cards = [
         name: 'Need for Speed',
         genre: 'Simulator',
         developer: 'EA',
-        grade: '4.5/5',
+        grade: '4.5',
         category: 'Simulator'
     },
     {
@@ -191,7 +192,7 @@ let cards = [
         name: 'Diablo',
         genre: 'PRG',
         developer: 'Blizzard Entertainment',
-        grade: '4/5',
+        grade: '4',
         category: 'PRG'
     },
     {
@@ -200,7 +201,7 @@ let cards = [
         name: 'The elder scroll: Oblivion',
         genre: 'RPG',
         developer: 'Bethesda Game Studios',
-        grade: '3.5/5',
+        grade: '3.5',
         category: 'RPG'
     },
     {
@@ -209,7 +210,7 @@ let cards = [
         name: 'GTA: Vice city',
         genre: 'TPS',
         developer: 'Rock Star Game',
-        grade: '3.5/5',
+        grade: '3.5',
         category: 'TPS'
     },
     {
@@ -218,7 +219,7 @@ let cards = [
         name: 'Fable',
         genre: 'RPG',
         developer: 'Lionhead Studios',
-        grade: '4.5/5',
+        grade: '4.5',
         category: 'RPG'
     },
     
@@ -238,84 +239,60 @@ for (let i = 0; i < cards.length; i++) {
         '.cards .container').createCard();
 }
 
-let sizeText = document.querySelector('.size');
-let rangeText = document.querySelector('.size-text');
-console.log(sizeText);
-console.log(rangeText);
+function app() {
+    const buttons = document.querySelectorAll('.btn');
+    const cards = document.querySelectorAll('.card');
 
-let genreVal, children;
-
-function createGenre() {
-    genreVal = document.createElement('p');
-    genreVal.classList.add('');
-    genreVal.style.fontSize = sizeText.textContainer;
-
-    return genreVal;
-}
-
-rangeText.oninput = function () {
-    let fontSize = rangeText.value;
-
-    sizeText.textContent = fontSize;
-}
-
-let cardDs = document.querySelector('.card');
-// let inputGenre = document.querySelectorAll('.genre-input');
-
-let checkbox = document.querySelectorAll('.genre-input');
-
-for (let i = 0; i < checkbox.length; i++) {
-    checkbox[i].addEventListener("change", checkedOrNot);
-}
-
-function checkedOrNot() {
-    let isChecked = this.checked;
-
-    if (isChecked) {
-        
+    function filter(category, items) {
+        items.forEach((item) => {
+            const isItemFiltered = !item.classList.contains(category);
+            const isShowAll = category.toLowerCase() === 'all';
+            if (isItemFiltered && !isShowAll) {
+                item.classList.add('hidden');
+            } 
+            else {
+                item.classList.remove('hidden');
+            }
+        })
     }
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const currentCategory = button.dataset.filter;
+            filter(currentCategory, cards);
+        })
+    })
 }
 
-inputGenre.onclick = function () {
-    for (cardD of cardDs) {
-        if (cardD.dataset.category == inputGenre[i].value && inputGenre.value !== 'all') {
-            cardD.classList.add("hidden");
-        }
-        else {
-            cardD.classList.remove("hidden");
-        }
+app()
+
+function app() {
+    const buttons = document.querySelectorAll('.btn');
+    const cards = document.querySelectorAll('.card');
+
+    function filter(category, items) {
+        items.forEach((item) => {
+            const isItemFiltered = !item.classList.contains(category);
+            const isShowAll = category.toLowerCase() === 'all';
+            if (isItemFiltered && !isShowAll) {
+                item.classList.add('hidden');
+            }
+            else {
+                item.classList.remove('hidden');
+            }
+        })
     }
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const currentCategory = button.dataset.filter;
+            filter(currentCategory, cards);
+        })
+    })
 }
 
+app()
 
-
-// работает с select
-// let milks = document.querySelectorAll('.card');
-// let inputGenre = document.querySelector('.list');
-
-// inputGenre.onchange = function () {
-//     for (milk of milks) {
-//         if (milk.dataset.category !== inputGenre.value && inputGenre.value !== 'all') {
-//             milk.classList.add("hidden");
-
-//         }
-//         else {
-//             milk.classList.remove("hidden");
-//         }
-//     }
-// };
-
-// работает с одним checkbox
-// function checkedOrNot() {
-//     let isChecked = this.checked;
-
-//     if (isChecked) {
-//         cardDs.classList.add('hidden');
-//     }
-//     else {
-//         cardDs.classList.remove('hidden');
-//     }
-// };
 
 
 

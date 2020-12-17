@@ -8,17 +8,11 @@
     display: table;
     margin-left: 30px;
     padding: 10px;
-    width: 25%;
+    width: 20%;
     text-align: left;
     border: 1px solid beige;
     background-color: rgba(255, 255, 255, 0.2);
     font-size: 20px;
-
-    & fieldset {
-        border-radius: 20px;
-        margin-bottom: 20px;
-        padding-left: 20px;
-    }
 
     & legend {
         font-size: 24px;
@@ -26,41 +20,40 @@
         padding-left: 20px;
         letter-spacing: 5px;
         color: beige;
-        text-shadow: 0 0 20px rgb(202, 44, 44);
-
-    }
-
-    & .head__btn {
-        letter-spacing: 5px;
+        text-shadow: 0 0 20px rgb(202, 44, 44);    
     }
 }
 
-.genre-setting {
+.setting-filter {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 24px;
-
-    & span {
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-
-
-    &-window {
-        margin-left: 10px;
-        padding: 3px 15px;
-        width: 70px;
-        height: 40px;
-        color: black;
-        background-color: beige;
-        border-radius: 10px;
-    }
+    justify-content: space-around;
 }
 
-.game-developer {
-    font-size: 20px;
+.btn-blok {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 45%;
+
+    & .btn {
+        margin: 10px;
+        border: 1px solid beige;
+        color: beige;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.2);
+
+        &:hover {
+            background-color: rgb(67, 122, 22);
+        }
+        &:focus {
+            background-color: rgb(170, 168, 32);
+            outline: none;
+        }
+        &:active {
+            background-color: rgb(212, 82, 31);
+        }
+    }
 }
 
 .hidden {
