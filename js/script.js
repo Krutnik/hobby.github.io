@@ -272,23 +272,20 @@ function checkedOrNot() {
     let isChecked = this.checked;
 
     if (isChecked) {
-        cardDs.classList.add('hidden');
-    }
-    else {
-        cardDs.classList.remove('hidden');
+        
     }
 }
 
-// inputGenre.onclick = function () {
-//     for (cardD of cardDs) {
-//         if (cardD.dataset.category == inputGenre[i].value && inputGenre.value !== 'all') {
-//             cardD.classList.add("hidden");
-//         }
-//         else {
-//             cardD.classList.remove("hidden");
-//         }
-//     }
-// }
+inputGenre.onclick = function () {
+    for (cardD of cardDs) {
+        if (cardD.dataset.category == inputGenre[i].value && inputGenre.value !== 'all') {
+            cardD.classList.add("hidden");
+        }
+        else {
+            cardD.classList.remove("hidden");
+        }
+    }
+}
 
 
 
@@ -305,6 +302,18 @@ function checkedOrNot() {
 //         else {
 //             milk.classList.remove("hidden");
 //         }
+//     }
+// };
+
+// работает с одним checkbox
+// function checkedOrNot() {
+//     let isChecked = this.checked;
+
+//     if (isChecked) {
+//         cardDs.classList.add('hidden');
+//     }
+//     else {
+//         cardDs.classList.remove('hidden');
 //     }
 // };
 
