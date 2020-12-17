@@ -4,7 +4,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     width: 1900px;
-    margin: 0;
+    margin: auto;
 
     background-color: black;
     background-image: url(https://img4.goodfon.ru/original/1920x1080/0/b8/wow-varkraft-simvol.jpg);
@@ -977,8 +977,8 @@ main {
 
 @media (min-width: 769px) and (max-width: 1024px) {
     body {
-        min-width: 576px;
-        max-width: 768px;
+        min-width: 769px;
+        max-width: 1024px;
     }
 
     .head {
@@ -1133,160 +1133,140 @@ main {
     }
 }
 
-// @media (min-width: 1025px) and (max-width: 1440px) {
-//     body {
-//         min-width: 576px;
-//         max-width: 768px;
-//     }
+@media (min-width: 1025px) and (max-width: 1440px) {
+    body {
+        min-width: 1025px;
+        max-width: 1440px;
+    }
 
-//     .head {
-//         display: table;
+    .game-setting {
 
-//         &__title {
-//             display: block;
-//         }
+        & .carousel {
+            display: none;
+        } 
+    }
 
-//         & .other {
-//             padding: 0 10px;
-//             margin: 0 10px;
-//         }
-//     }
+    .hockey {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
 
-//     .game-setting {
-
-//         & .carousel {
-//             display: none;
-//         } 
-//     }
-
-//     .hockey {
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-around;
-//         align-items: center;
-//     }
-
-//     & .hockey-history {
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-around;
-//         align-items: center;
+    & .hockey-history {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
 
 
-//         &__image {
-//             display: flex;
-//             flex-direction: row;
-//             justify-content: space-around;
-//             align-items: center;
-//             flex-wrap: wrap;
+        &__image {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
 
-//             & img {
-//                 position: relative;
-//                 width: 200px;
-//                 height: 200px;
-//             }
+            & img {
+                position: relative;
+                width: 200px;
+                height: 200px;
+            }
 
-//             & .img-1,
-//             & .img-2,
-//             & .img-4,
-//             & .img-10,
-//             & .img-7,
-//             & .img-9 {
-//                 top: 0;
-//                 left: 0;
-//                 border: none;
-//                 margin: 5px;
-//             }
+            & .img-1,
+            & .img-2,
+            & .img-4,
+            & .img-10,
+            & .img-7,
+            & .img-9 {
+                top: 0;
+                left: 0;
+                border: none;
+                margin: 5px;
+            }
 
-//             & .img-3,
-//             & .img-5,
-//             & .img-8,
-//             & .img-6 {
-//                 display: none;
-//             }
-//         }
+            & .img-3,
+            & .img-5,
+            & .img-8,
+            & .img-6 {
+                display: none;
+            }
+        }
 
-//         &__text {
-//             width: 90%;
-//             margin: 30px 0;
-//         }
-//     }
+        &__text {
+            width: 90%;
+            margin: 30px 0;
+        }
+    }
 
-//     .table-game {
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-around;
-//         align-items: center;
+    .table-game {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
 
-//         &__setting {
-//             display: flex;
-//             flex-direction: row;
-//             justify-content: space-around;
-//             flex-wrap: wrap;
+        &__setting {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
 
-//             &__text {
-//                 width: 45%;
-//                 margin-bottom: 10px;
-//             }
-//             &__card {
-//                 width: 45%;
-//                 margin-bottom: 10px;
-//             }
-//         }
-//     }
+            &__text {
+                width: 45%;
+                margin-bottom: 10px;
+            }
+            &__card {
+                width: 45%;
+                margin-bottom: 10px;
+            }
+        }
+    }
 
-//     .craft {
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-around;
-//         align-items: center;
+    .craft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
 
-//         &__blok {
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: space-around;
-//             align-items: center;
+        &__blok {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
 
-//             &__project,
-//             &__work,
-//             &__about {
-//                 width: 90%;
-//             }
+            &__project,
+            &__work,
+            &__about {
+                width: 33%;
+            }
 
-//             &__work {
-//                 &-in-work {
-//                     & .future{
-//                         & img {
-//                             width: 90%;
-//                         }
-//                     }
-//                 }
+            &__work {
+                &-in-work {
+                    & .future{
+                        & img {
+                            width: 90%;
+                        }
+                    }
+                }
 
-//                 &-helpers {
-//                     &__setting {
-//                         display: flex;
-//                         flex-direction: row;
+                &-helpers {
+                    &__setting {
+                        display: flex;
+                        flex-direction: row;
 
-//                         & .future {
-//                             width: 45%;
+                        & .future {
+                            width: 45%;
 
-//                             & img {
-//                                 width: 90%;
-//                             }
+                            & img {
+                                width: 90%;
+                            }
                             
-//                         }
-//                     }
+                        }
+                    }
                     
                     
-//                 }
-//             }
-//         }
+                }
+            }
+        }
 
-//     }
-
-//     .foot {
-//         &-contacs {
-//             flex-wrap: wrap;
-//         }
-//     }
-// }
+    }
+}
