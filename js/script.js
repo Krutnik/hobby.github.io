@@ -268,16 +268,16 @@ for (let i = 0; i < checkbox.length; i++) {
     checkbox[i].addEventListener("change", checkedOrNot);
 }
 
-// function checkedOrNot() {
-//     let isChecked = this.checked;
+function checkedOrNot() {
+    let isChecked = this.checked;
 
-//     if (isChecked) {
-//         cardDs.classList.add('hidden');
-//     }
-//     else {
-//         cardDs.classList.remove('hidden');
-//     }
-// }
+    if (isChecked) {
+        cardDs.classList.add('hidden');
+    }
+    else {
+        cardDs.classList.remove('hidden');
+    }
+}
 
 // inputGenre.onclick = function () {
 //     for (cardD of cardDs) {

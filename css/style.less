@@ -474,6 +474,21 @@ main {
                 margin-top: 10px;
                 margin-bottom: 20px;
             }
+
+            &__setting {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+
+                & .future {
+                    margin: 10px;
+                    width: 40%;
+                    padding: 10px;
+                    border: 1px solid beige;
+                    border-radius: 20px;
+                }
+            }
         }
         &-inspiration {
             display: flex;
@@ -503,6 +518,21 @@ main {
                 letter-spacing: 5px;
                 margin-top: 10px;
                 margin-bottom: 20px;
+            }
+
+            &__setting {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+
+                & .future {
+                    margin: 10px;
+                    width: 40%;
+                    padding: 10px;
+                    border: 1px solid beige;
+                    border-radius: 20px;
+                }
             }
         }
     }
@@ -650,28 +680,596 @@ main {
         } 
     }
 
+    .hockey {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
     & .hockey-history {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
 
 
         &__image {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
 
             & img {
                 position: relative;
+                width: 90%;
             }
 
-            // & .img-1,
-            // & .img-1,
+            & .img-1,
+            & .img-7 {
+                top: 0;
+                left: 0;
+                border: none;
+                margin: 5px;
 
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: space-around;
+            }
+
+            & .img-2,
             & .img-3,
             & .img-4,
             & .img-5,
             & .img-6,
-            & .img-7,
             & .img-8,
             & .img-9,
             & .img-10 {
                 display: none;
             }
+        }
+
+        &__text {
+            width: 90%;
+            margin: 30px 0;
+        }
+    }
+
+    .table-game {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &__setting {
+
+            &__text {
+                width: 90%;
+            }
+            &__card {
+                display: none;
+            }
+        }
+    }
+
+    .craft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &__blok {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            &__project,
+            &__work,
+            &__about {
+                width: 90%;
+            }
+
+            &__work {
+                &-in-work {
+                    & .future{
+                        & img {
+                            width: 90%;
+                        }
+                    }
+                }
+
+                &-helpers {
+                    &__setting {
+                        display: flex;
+                        flex-direction: column;
+
+                        & .future {
+                            width: 90%;
+                            
+                        }
+                    }
+                    
+                    
+                }
+            }
+        }
+
+    }
+
+    .foot {
+        &-contacs {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    body {
+        min-width: 576px;
+        max-width: 768px;
+    }
+
+    .head {
+        text-align: center;
+
+        &__title {
+            display: block;
+            width: 70%;
+        }
+
+        & .other {
+            display: none;
+        }
+    }
+
+    .game-setting {
+
+        & .carousel {
+            display: none;
+        } 
+    }
+
+    .hockey {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        height: 1000px;
+    }
+
+    & .hockey-history {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+
+        &__image {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+
+            & img {
+                position: relative;
+                width: 200px;
+                height: 200px;
+            }
+
+            & .img-1,
+            & .img-2,
+            & .img-4,
+            & .img-7,
+            & .img-9 {
+                top: 0;
+                left: 0;
+                border: none;
+                margin: 5px;
+            }
+
+            & .img-3,
+            & .img-5,
+            & .img-6,
+            & .img-8,
+            & .img-10 {
+                display: none;
+            }
+        }
+
+        &__text {
+            width: 90%;
+            margin: 30px 0;
+        }
+    }
+
+    .table-game {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &__setting {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            &__text {
+                width: 90%;
+            }
+            &__card {
+                width: 90%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .craft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &__blok {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            &__project,
+            &__work,
+            &__about {
+                width: 90%;
+            }
+
+            &__work {
+                &-in-work {
+                    & .future{
+                        & img {
+                            width: 90%;
+                        }
+                    }
+                }
+
+                &-helpers {
+                    &__setting {
+                        display: flex;
+                        flex-direction: column;
+
+                        & .future {
+                            width: 90%;
+                            
+                        }
+                    }
+                    
+                    
+                }
+            }
+        }
+
+    }
+
+    .foot {
+        &-contacs {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        min-width: 576px;
+        max-width: 768px;
+    }
+
+    .head {
+        display: table;
+
+        &__title {
+            display: block;
+        }
+
+        & .other {
+            padding: 0 10px;
+            margin: 0 10px;
+        }
+    }
+
+    .game-setting {
+
+        & .carousel {
+            display: none;
+        } 
+    }
+
+    .hockey {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    & .hockey-history {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+
+        &__image {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+
+            & img {
+                position: relative;
+                width: 200px;
+                height: 200px;
+            }
+
+            & .img-1,
+            & .img-2,
+            & .img-4,
+            & .img-10,
+            & .img-7,
+            & .img-9 {
+                top: 0;
+                left: 0;
+                border: none;
+                margin: 5px;
+            }
+
+            & .img-3,
+            & .img-5,
+            & .img-8,
+            & .img-6 {
+                display: none;
+            }
+        }
+
+        &__text {
+            width: 90%;
+            margin: 30px 0;
+        }
+    }
+
+    .table-game {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &__setting {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            &__text {
+                width: 45%;
+                margin-bottom: 10px;
+            }
+            &__card {
+                width: 45%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .craft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &__blok {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            &__project,
+            &__work,
+            &__about {
+                width: 90%;
+            }
+
+            &__work {
+                &-in-work {
+                    & .future{
+                        & img {
+                            width: 90%;
+                        }
+                    }
+                }
+
+                &-helpers {
+                    &__setting {
+                        display: flex;
+                        flex-direction: row;
+
+                        & .future {
+                            width: 45%;
+
+                            & img {
+                                width: 90%;
+                            }
+                            
+                        }
+                    }
+                    
+                    
+                }
+            }
+        }
+
+    }
+
+    .foot {
+        &-contacs {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    body {
+        min-width: 576px;
+        max-width: 768px;
+    }
+
+    .head {
+        display: table;
+
+        &__title {
+            display: block;
+        }
+
+        & .other {
+            padding: 0 10px;
+            margin: 0 10px;
+        }
+    }
+
+    .game-setting {
+
+        & .carousel {
+            display: none;
+        } 
+    }
+
+    .hockey {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    & .hockey-history {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+
+        &__image {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+
+            & img {
+                position: relative;
+                width: 200px;
+                height: 200px;
+            }
+
+            & .img-1,
+            & .img-2,
+            & .img-4,
+            & .img-10,
+            & .img-7,
+            & .img-9 {
+                top: 0;
+                left: 0;
+                border: none;
+                margin: 5px;
+            }
+
+            & .img-3,
+            & .img-5,
+            & .img-8,
+            & .img-6 {
+                display: none;
+            }
+        }
+
+        &__text {
+            width: 90%;
+            margin: 30px 0;
+        }
+    }
+
+    .table-game {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &__setting {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            &__text {
+                width: 45%;
+                margin-bottom: 10px;
+            }
+            &__card {
+                width: 45%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .craft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &__blok {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            &__project,
+            &__work,
+            &__about {
+                width: 90%;
+            }
+
+            &__work {
+                &-in-work {
+                    & .future{
+                        & img {
+                            width: 90%;
+                        }
+                    }
+                }
+
+                &-helpers {
+                    &__setting {
+                        display: flex;
+                        flex-direction: row;
+
+                        & .future {
+                            width: 45%;
+
+                            & img {
+                                width: 90%;
+                            }
+                            
+                        }
+                    }
+                    
+                    
+                }
+            }
+        }
+
+    }
+
+    .foot {
+        &-contacs {
+            flex-wrap: wrap;
         }
     }
 }
