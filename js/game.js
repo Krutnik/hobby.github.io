@@ -5,7 +5,7 @@ class GameCard {
     #_genre;
     #_developer;
     #_grade;
-    #_category
+    #_category;
     #_parent;
 
     constructor(src, alt, name, genre, developer, grade, category, parent) {
